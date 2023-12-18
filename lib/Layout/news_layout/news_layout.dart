@@ -16,6 +16,12 @@ class NewsLayout extends StatelessWidget {
             return Text(NewsCubit.titles[NewsCubit.currentIndex]);
           },
         ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.search),
+          )
+        ],
       ),
       body: BlocBuilder<NewsCubit, NewsState>(
         builder: (context, state) {
@@ -25,17 +31,9 @@ class NewsLayout extends StatelessWidget {
       bottomNavigationBar: BlocBuilder<NewsCubit, NewsState>(
         builder: (context, state) {
           return BottomNavigationBar(
-            type: BottomNavigationBarType.fixed,
             currentIndex: NewsCubit.currentIndex,
             onTap: (index) => NewsCubit.get(context).changeNavBar(index),
-            items: const [
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.newspaper), label: "News"),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.newspaper), label: "News"),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.newspaper), label: "News")
-            ],
+            items: NewsCubit.navigationItems,
           );
         },
       ),
