@@ -10,7 +10,6 @@ class NewsLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
         title: BlocBuilder<NewsCubit, NewsState>(
           builder: (context, state) {
             return Text(NewsCubit.titles[NewsCubit.currentIndex]);
@@ -20,6 +19,12 @@ class NewsLayout extends StatelessWidget {
           IconButton(
             onPressed: () {},
             icon: const Icon(Icons.search),
+          ),
+          IconButton(
+            onPressed: () {
+              NewsCubit.get(context).changeThemeMode();
+            },
+            icon: const Icon(Icons.brightness_4_outlined),
           )
         ],
       ),
