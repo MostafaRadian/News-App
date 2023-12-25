@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:news_app/Screens/search/search_screen.dart';
 
 import '../../logic/news_cubit.dart';
 
@@ -17,7 +18,10 @@ class NewsLayout extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => SearchScreen()));
+            },
             icon: const Icon(Icons.search),
           ),
           IconButton(

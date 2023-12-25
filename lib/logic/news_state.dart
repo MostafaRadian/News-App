@@ -22,3 +22,7 @@ class GetSportsErrorState extends NewsState {}
 class GetScienceSuccessState extends NewsState {}
 
 class GetScienceErrorState extends NewsState {}
+
+class GetSearchSuccessState extends NewsState {}
+
+class GetSearchErrorState extends NewsState {}

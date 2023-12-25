@@ -18,8 +18,8 @@ class NewsCubit extends Cubit<NewsState> {
   List<dynamic> business = [];
   List<dynamic> sports = [];
   List<dynamic> science = [];
-  static const String url =
-      'https://newsapi.org/v2/top-headlines?country=eg&category=business&apiKey=3b22235fbfbf4f609ba0630c7619bae4';
+  List<dynamic> search = [];
+
   static const List<Widget> screens = [
     BusinessScreen(),
     SportsScreen(),
@@ -113,6 +113,23 @@ class NewsCubit extends Cubit<NewsState> {
         print('An error occurred: $error');
       }
       emit(GetScienceErrorState());
+    }
+  }
+
+  Future<void> getSearch(String query) async {
+    try {
+      emit(NewsLoadingState());
+      Response<dynamic> result = await DioHelper.getData(
+        url: '/v2/everything',
+        query: {'q': query, 'apiKey': '3b22235fbfbf4f609ba0630c7619bae4'},
+      );
+      search = result.data['articles'];
+      emit(GetSearchSuccessState());
+    } catch (error) {
+      if (kDebugMode) {
+        print('An error occurred: $error');
+      }
+      emit(GetSearchErrorState());
     }
   }
 

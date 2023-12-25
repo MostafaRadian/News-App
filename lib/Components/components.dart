@@ -70,3 +70,30 @@ Widget articleBuilder(newsList, context) => ConditionalBuilder(
         color: Color(0xff7D5260),
       )),
     );
+
+Widget defaultFormField(
+  TextEditingController controller,
+  TextInputType type,
+  String? Function(String? value) validate,
+  String label,
+  Icon prefixIcon,
+  void Function(String?) onChange, {
+  bool hidden = false,
+  IconData? suffixIcon,
+}) =>
+    SizedBox(
+      width: 300,
+      child: TextFormField(
+          controller: controller,
+          keyboardType: type,
+          obscureText: hidden,
+          onFieldSubmitted: onChange,
+          decoration: InputDecoration(
+            labelText: label,
+            border: const OutlineInputBorder(),
+            prefixIcon: prefixIcon,
+            suffixIcon: IconButton(
+                onPressed: () {}, icon: Icon(suffixIcon ?? suffixIcon)),
+          ),
+          validator: validate),
+    );
