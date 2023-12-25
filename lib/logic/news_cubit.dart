@@ -7,6 +7,8 @@ import 'package:news_app/Screens/Sports/sports_screen.dart';
 import 'package:news_app/Screens/business/business_screen.dart';
 import 'package:news_app/network/remote/dio_helper.dart';
 
+import '../network/local/cache_helper.dart';
+
 part 'news_state.dart';
 
 class NewsCubit extends Cubit<NewsState> {
@@ -41,8 +43,13 @@ class NewsCubit extends Cubit<NewsState> {
     emit(ChangeNavBarState());
   }
 
-  void changeThemeMode() {
-    mode = !mode;
+  Future<void> changeThemeMode({bool? sharedTheme}) async {
+    if (sharedTheme != null) {
+      mode = sharedTheme;
+    } else {
+      mode = !mode;
+      await CacheHelper.putData(key: 'isDark', value: mode);
+    }
     emit(ChangeThemeModeState());
   }
 
