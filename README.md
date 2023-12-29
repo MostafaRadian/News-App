@@ -47,9 +47,6 @@ To run the app locally, follow these steps:
    flutter run
    ```
 
-## Contributions
-
-Contributions to this project are welcome. If you encounter any issues or have suggestions for improvements, please open an issue or submit a pull request on the GitHub repository.
 
 ## License
 
@@ -64,4 +61,4 @@ This project is licensed under the [MIT License](LICENSE). Feel free to modify a
 
 ## Screenshots
 
-![Screenshot 1]()![Screenshot 2]()![Screenshot 3]()*Note: The screenshots are for illustrative purposes and may not represent the actual news articles displayed in the app.*
+![Screenshot 1](https://github.com/MostafaRadian/News-App/assets/46004434/1267b761-256e-48fb-9bef-413476415289)![Screenshot 2](https://github.com/MostafaRadian/News-App/assets/46004434/990625fa-c313-41ed-9492-b2d49f160141)![Screenshot 3](https://github.com/MostafaRadian/News-App/assets/46004434/67ef0fc7-76fc-4af0-ad27-173a4950f1ed)![Screenshot 4](https://github.com/MostafaRadian/News-App/assets/46004434/bb31620a-f502-4c10-8d83-5348d0036bf3)![Screenshot 5](https://github.com/MostafaRadian/News-App/assets/46004434/918335ee-f4b6-4f6e-968e-8874e482a3e8)![Screenshot 6](https://github.com/MostafaRadian/News-App/assets/46004434/cbe89798-4c96-43bd-82aa-5299385e209a)*Note: The screenshots are for illustrative purposes and may not represent the actual news articles displayed in the app.*
