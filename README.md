@@ -31,19 +31,19 @@ To run the app locally, follow these steps:
 1. Ensure that you have Flutter and Dart SDK installed on your machine.
 
 2. Clone this repository to your local machine using the following command:
-   ````
+   ```
    git clone <repository-url>
    ```
 
 3. Navigate to the project directory and install the required dependencies by running:
-   ````
+   ```
    flutter pub get
    ```
 
 4. Update the API key in the `news_cubit.dart` file with your own API key. You can obtain an API key from the news API provider.
 
 5. Run the app on an emulator or a connected device using the following command:
-   ````
+   ```
    flutter run
    ```
 
