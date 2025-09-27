@@ -86,7 +86,7 @@ class MyApp extends StatelessWidget {
               ),
               iconButtonTheme: const IconButtonThemeData(
                 style: ButtonStyle(
-                    iconColor: MaterialStatePropertyAll(Colors.white)),
+                    iconColor: WidgetStatePropertyAll(Colors.white)),
               ),
               bottomNavigationBarTheme: BottomNavigationBarThemeData(
                 type: BottomNavigationBarType.fixed,
